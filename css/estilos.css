@@ -34,7 +34,7 @@ a {
 
 /* Configuración de fondos de página principal */
 .principal {
-  background-image: url(imagenes/an\ animated\ bull\ with\ wings.png);
+  background-image: url(../imagenes/an\ animated\ bull\ with\ wings.png); /* Ruta corregida */
   background-size: cover; /* Ajustado para cubrir la pantalla */
   background-position: center;
   background-repeat: no-repeat;
@@ -183,5 +183,6 @@ h3 {
     font-size: 14px;
   }
 }
+
 
 
