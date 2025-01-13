@@ -1,14 +1,16 @@
 /* Configuración de títulos de cada página */
 .textos {
-  color: red;
+  color: blue;
   text-align: center;
-  font-size: 45px;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .textos2 {
   color: white;
   text-align: center;
-  font-size: 15px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 /* Configuración de textos de información de contacto */
