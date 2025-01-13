@@ -39,7 +39,10 @@ a {
   background-size: cover; /* Ajustado para cubrir la pantalla */
   background-position: center;
   background-repeat: no-repeat;
-  height: 110vh; /* Forzamos el alto */
+  min-height: 100vh; /* Permite contenido dinámico */
+  display: flex;
+  flex-direction: column; /* Coloca elementos verticalmente */
+  justify-content: space-between; /* Asegura que el footer esté abajo */
 }
 
 /* Configuración de fondo de sub-menus */
@@ -65,13 +68,12 @@ a {
 
 /* Configuración para barra inferior contacto */
 .footer {
-  position: absolute; /* Corregido para mantener abajo */
-  bottom: 0;
-  width: 100%;
+  position: relative; /* Cambiado de absolute a relative */
   text-align: center;
   background-color: black;
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 10px 0;
+  margin-top: auto; /* Empuja hacia abajo si hay espacio */
 }
 
 .footer a {
@@ -148,41 +150,34 @@ h3 {
 }
 
 /* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .contenedor-imagenes {
+    flex-direction: column; /* Una sola columna para imágenes */
+    gap: 10px;
+  }
+
   .textos {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .textos2 {
-    font-size: 12px;
-  }
-
-  .informacion {
-    font-size: 20px;
-  }
-
-  .contenedor-imagenes {
-    gap: 10px;
-    margin: 10px 0;
+    font-size: 10px;
   }
 
   .menu-list li {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .menu-buttons {
-    gap: 5px;
+    font-size: 14px;
+    padding: 8px;
   }
 
   .menu-btn {
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 5px 8px;
+    font-size: 12px;
   }
-
-  .footer {
-    font-size: 14px;
-  }
+}
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Altura del footer */
+  box-sizing: border-box;
 }
 
 
