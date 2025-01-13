@@ -7,11 +7,12 @@
 }
 
 .textos2 {
-  color: white;
-  background-color: black;
+  color: black;
+  /*background-color: black;*/
   text-align: center;
   font-size: 15px;
 }
+
 
 /* Configuración de textos de información de contacto */
 .informacion {
