@@ -13,7 +13,6 @@
   font-size: 15px;
 }
 
-
 /* Configuración de textos de información de contacto */
 .informacion {
   color: black;
@@ -24,25 +23,25 @@
 /* Configuración de enlaces */
 a {
   background-color: red;
-  display: inline-block; /* Cambiado a inline-block */
+  display: inline-block;
   color: white;
   text-decoration: none;
   margin: 10px;
   border: 2px solid white;
   border-radius: 10px;
-  padding: 5px 10px; /* Ajuste del padding */
+  padding: 5px 10px;
 }
 
 /* Configuración de fondos de página principal */
 .principal {
-  background-image: url(../imagenes/principal.png); /* Ruta corregida */
-  background-size: cover; /* Ajustado para cubrir la pantalla */
+  background-image: url(../imagenes/principal.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* Permite contenido dinámico */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Coloca elementos verticalmente */
-  justify-content: space-between; /* Asegura que el footer esté abajo */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Configuración de fondo de sub-menus */
@@ -52,8 +51,8 @@ a {
 
 /* Configuración de imágenes */
 .enlace-imagen {
-  width: 100%; /* Ajusta el ancho al 100% */
-  max-width: 200px; /* No excede este tamaño */
+  width: 100%;
+  max-width: 200px;
   height: auto;
   border: 2px solid white;
   border-radius: 10px;
@@ -66,14 +65,16 @@ a {
   margin: 0;
 }
 
-/* Configuración para barra inferior contacto */
+/* Configuración para barra inferior (footer fijo) */
 .footer {
-  position: relative; /* Cambiado de absolute a relative */
+  position: fixed; /* Mantiene el footer fijo en la parte inferior */
+  bottom: 0;
+  width: 100%;
   text-align: center;
   background-color: black;
   color: white;
   padding: 10px 0;
-  margin-top: auto; /* Empuja hacia abajo si hay espacio */
+  z-index: 10;
 }
 
 .footer a {
@@ -83,24 +84,28 @@ a {
   font-size: 18px;
 }
 
+.footer a:hover {
+  text-decoration: underline;
+}
+
 /* Configuración de posición de las imágenes en la página principal */
 .contenedor-imagenes {
   display: flex;
-  flex-wrap: wrap; /* Ajustado para dispositivos móviles */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaciado más ajustado */
+  gap: 20px;
   margin: 20px 0;
 }
 
 /* Configuración para alinear los elementos en la parte superior */
 .content {
   display: flex;
-  flex-direction: column; /* Coloca los elementos verticalmente */
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   margin: 20px auto;
-  width: 90%; /* Ajusta el ancho para móviles */
+  width: 90%;
 }
 
 /* Redondea las esquinas de la imagen de los toritos en el menú de toritos */
@@ -122,7 +127,7 @@ a {
   background-color: green;
   padding: 10px;
   border-radius: 15px;
-  border: 1px solid white; /* Ajustado para consistencia */
+  border: 1px solid white;
 }
 
 h3 {
@@ -131,9 +136,9 @@ h3 {
 
 /* Botones del menú */
 .menu-buttons {
-  position: relative; /* Cambiado para evitar problemas de superposición */
+  position: relative;
   display: flex;
-  flex-wrap: wrap; /* Para móviles */
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   margin: 10px 0;
@@ -152,7 +157,7 @@ h3 {
 /* Media queries para dispositivos móviles */
 @media (max-width: 480px) {
   .contenedor-imagenes {
-    flex-direction: column; /* Una sola columna para imágenes */
+    flex-direction: column;
     gap: 10px;
   }
 
@@ -174,11 +179,13 @@ h3 {
     font-size: 12px;
   }
 }
+
 body {
   margin: 0;
-  padding-bottom: 60px; /* Altura del footer */
+  padding-bottom: 60px; /* Espacio para el footer fijo */
   box-sizing: border-box;
 }
+
 
 
 
